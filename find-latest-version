@@ -5,7 +5,7 @@
 # This code is subject to the cPanel license. Unauthorized copying is prohibited
 #
 # This provides incremental updates to existing packages in EasyApache4.
-package apr::find_latest_version;
+package ea_ruby27_libuv::find_latest_version;
 
 use strict;
 use warnings;
