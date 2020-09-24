@@ -24,9 +24,10 @@ Name: %{?scl_prefix}libuv
 Epoch:   1
 Version: 1.39.0
 Release: %{release_prefix}%{?dist}.cpanel
-Summary: Platform layer for Node.js
+Summary: libuv is a multi-platform support library with a focus on asynchronous I/O.
+
 # the licensing breakdown is described in detail in the LICENSE file
-License: MIT and BSD and ISC
+License: https://github.com/libuv/libuv/blob/v1.x/LICENSE
 
 BuildRequires: cmake3
 BuildRequires: libuv
@@ -55,9 +56,9 @@ Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 
 %description
-libuv is a new platform layer for Node. Its purpose is to abstract IOCP on
-Windows and libev on Unix systems. We intend to eventually contain all platform
-differences in this library.
+libuv is a multi-platform support library with a focus on asynchronous I/O. It
+was primarily developed for use by Node.js, but it's also used by Luvit,
+Julia, pyuv, and others.
 
 %package devel
 Summary: Development libraries for libuv
