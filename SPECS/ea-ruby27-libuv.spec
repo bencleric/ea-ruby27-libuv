@@ -89,10 +89,10 @@ install -d %{buildroot}%{_libdir}
 
 install -pm644 include/uv.h %{buildroot}%{_includedir}
 
-echo "PWD" `pwd`
-ls -ld *
-ls -ld include/*
-cat -n include/uv.h
+mkdir -p -m 0777 %{buildroot}%{_includedir}/uv/
+cp include/uv/* %{buildroot}%{_includedir}/uv/
+chmod 0644 %{buildroot}%{_includedir}/uv/*
+chmod 0755 %{buildroot}%{_includedir}/uv
 
 install build/libuv.so.%{sofull}  %{buildroot}%{_libdir}/libuv.so.%{?scl:%{scl_name}-}%{version}
 ln -sf %{_libdir}/libuv.so.%{?scl:%{scl_name}-}%{version} %{buildroot}%{_libdir}/libuv.so.%{sofull}
@@ -130,6 +130,7 @@ sed -e "s#@prefix@#%{_prefix}#g" \
 %{_libdir}/libuv.so
 %{_libdir}/pkgconfig/libuv.pc
 %{_includedir}/uv.h
+%{_includedir}/uv/*
 
 %changelog
 * Tue Sep 08 2020 Julian Brown <julian.brown@cpanel.net> - 1.39.0-1
