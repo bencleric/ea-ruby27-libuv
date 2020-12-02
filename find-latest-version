@@ -50,7 +50,7 @@ sub _get_required {
 
     my $version = $libuv[-1];
     my $name    = "libuv-v$version.tar.gz";
-    my $url     = "https://dist.libuv.org/dist/v1.39.0/libuv-v$version.tar.gz";
+    my $url     = "https://dist.libuv.org/dist/v$version/libuv-v$version.tar.gz";
 
     return ( $version, $url, $name );
 }
