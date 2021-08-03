@@ -22,7 +22,7 @@
 
 Name: %{?scl_prefix}libuv
 Epoch:   1
-Version: 1.41.0
+Version: 1.42.0
 Release: %{release_prefix}%{?dist}.cpanel
 Summary: libuv is a multi-platform support library with a focus on asynchronous I/O.
 
@@ -134,6 +134,9 @@ sed -e "s#@prefix@#%{_prefix}#g" \
 %{_includedir}/uv/*
 
 %changelog
+* Thu Jul 22 2021 Cory McIntire <cory@cpanel.net> - 1.42.0-1
+- EA-9983: Update ea-ruby27-libuv from v1.41.0 to v1.42.0
+
 * Thu Feb 25 2021 Cory McIntire <cory@cpanel.net> - 1.41.0-1
 - EA-9603: Update ea-ruby27-libuv from v1.39.0 to v1.41.0
 
